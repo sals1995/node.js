@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: rgba(55, 202, 116, 0.74);
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        #header {
+            height: 280px;
+            width: 100%;
+            background-color: rgba(68, 66, 66, 0.678);
+        }
+        .wel {
+            
+            animation: pop-in 1s linear;
+            transform: translate(0, 0);
+        }
+
+        @keyframes pop-in {
+            0% {
+                opacity: 0;
+                transform: translate(0, -20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+        
+        }
+
+        #loginForm {
+            background-color: rgba(255, 255, 255, 0.767);
+            margin-top: -110px;
+            animation: pop-in2 1s linear;
+            transform: translate(0, 0);
+        }
+
+        @keyframes pop-in2 {
+            0% {
+                opacity: 0;
+                transform: translate(0, 60px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+        
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="display-4 text-center pt-5" id="header">
+           <div class="wel"> welcome ... hope you a happpy day</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-6 mx-auto text-success shadow-lg rounded p-4" id="loginForm">
+            <h3 class="display-4 ">regester admins</h3>
+            <form action="/login" method="POST">
+                <div class="form-group mt-4">
+                    <label class="text-black-50 font-weight-bold " for="name">admin Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
+                </div>
+                <div class="form-group mt-4">
+                    <label for="password" class="text-black-50 font-weight-bold">password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password" name="password">
+                </div>
+                <button type="submit" class="btn btn-outline-success mb-5 ml-5 "><a
+                        class=" text-decoration-none text-dark font-weight-bolder">submit</a></button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

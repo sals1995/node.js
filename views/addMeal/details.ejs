@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="jquery-3.1.1.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <title>Our menu</title>
+  <style>
+    body {
+      text-align: center;
+      justify-content: center;
+      box-sizing: border-box;
+      font-size: larger;
+      background-image: url("../cookk.jpg");
+      background-attachment: fixed;
+    }
+
+    .cont {
+      width: 100%;
+
+    }
+
+    .eachPro {
+      width: 400px;
+      border: 2px solid rgb(77, 77, 83);
+      background-color: darkcyan;
+      color: rgb(9, 9, 59);
+      margin: 20px;
+      padding: 10px;
+    }
+
+  
+
+    label {
+      color: rgb(8, 56, 32)
+    }
+
+    form {
+      display: inline;
+    }
+
+    .boxSh {
+      box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    .modal {
+      margin-top: 150px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="row my-5 py-5" id="services">
+    <div class="col">
+      <div class="container">
+        <h1> Our menu </h1>
+
+                  <img class="card-img-top mx-auto d-block m-2" src="<%=list_data.img %>" alt="Card image">
+                  
+                  <h4><%= list_data.name %> </h4>
+                  <h5>price : <%= list_data.price %> LE</h5>
+                  <h5>Note : <%= list_data.note %></h5>
+                  <h5>Note : <%= list_data.description %></h5>
+
+                  
+
+      </div>  
+    </div>
+  </div>
+
+                 
+                  
+</body>
+
+</html>

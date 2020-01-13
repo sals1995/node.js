@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Our Ordes</title>
+    <style>
+         #id1{
+      background-color: rgba(0, 0, 0, 0.342);
+    }
+    body{
+        background-color: rgb(235, 233, 205);
+    }
+    
+    </style>
+</head>
+
+<body>
+    <div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/Menu/add">Add Meal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Menu/listMeals">List Meals</a>
+          </li>
+          </ul>
+          </nav>
+        </div>
+    <div class="container">
+        <div class="row" id="id1">
+        <% meal_data.forEach(function(meal,i){ %>
+            <div class="col-3 mt-5">
+        <div class="">
+            <div class="card bg-info">
+                <div class="card-body text-center">
+                    <a href="/MenuOrder/details/<%= meal._id %>" class="text-decoration-none text-light">
+                    <p> order <%= i %> </p>
+                    <p class="card-text">order time: <%= meal.ordertime %></p>
+                    
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <% })%>
+    </div>
+    </div>
+</body>
+
+</html>

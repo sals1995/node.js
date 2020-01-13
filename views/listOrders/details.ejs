@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Our Ordes</title>
+    <style>
+         body {
+      background-image: url("../bkbk.jpeg");
+      background-size: cover;
+      background-color: lightpink;
+    }
+    #id1{
+      background-color: rgba(0, 0, 0, 0.342);
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/Menu/add">Add Meal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Menu/listMeals">Meals List</a>
+            </li>
+            </ul>
+            </nav>
+          </div>
+    <div class="container">
+        <div class="row pt-5" id="id1">
+        <% detail_data.meals.forEach(function(meal){ %>
+        <div class="card-columns">
+            <div class="card bg-info">
+                <div class="card-body text-center">
+                    
+                    <p class="card-text">Order Name: <%= meal.name %></p>
+                    <p class="card-text">Order Price: <%= meal.price %> LE</p>
+                    <p class="card-text">Order Description: <%= meal.description %></p>
+                    <p class="card-text">Order Note: <%= meal.note %> Calory</p>
+
+                </div>
+            </div>
+        </div>
+        <% })%>
+   
+    </div>
+    </div>
+</body>
+
+</html>
